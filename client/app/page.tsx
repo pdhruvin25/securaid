@@ -1,18 +1,24 @@
-import React, { useEffect, useState } from 'react'
-
+"use client"
+import { useEffect, useState } from 'react';
+import { LoginComponent } from "../components/LoginComponent/LoginComponent";
+import {ContentComponent} from "../components/ContentComponent/ContentComponent";
 function page() {
 
-  const [message, setMessage] = useState("Loading")
+  const [login, setLogin] = useState("Loading");
 
   useEffect(() => {
-    fetch("http://localhost:3000/api/home").then(response => response.json()).then(data => {
-      console.log(data);
-      setMessage(data.message);
-    })
+    // Get the cookie information and set the state of Login accordingly
+    setLogin("Logged In");
   }, [])
-
   return (
-    <div>Hello World</div>
+    <>
+    <div id = "container">
+      <h1 id = "homepage_title">Securaid</h1>
+      <h4 id = "homepage_slogan">A secure place for everyone</h4>
+      <LoginComponent/>
+      <ContentComponent/>
+    </div>
+    </>
   )
 }
 
