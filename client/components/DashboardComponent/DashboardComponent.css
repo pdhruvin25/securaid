@@ -1,0 +1,23 @@
+.container{
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    backdrop-filter: blur(15px);
+    padding: 25px;
+    border-radius: 25px;
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+.title {
+    font-size: 25px;
+    font-weight: bold;
+    text-align: start;
+    color: var(--font_colour);
+  }
+
+  .content{
+    display: flex;
+    flex: 1;
+    background-color: rgba(131, 22, 22, 0.6);
+    border-radius: 15px;
+  }

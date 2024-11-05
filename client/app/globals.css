@@ -22,6 +22,8 @@ margin: 25px;
   font: 75px var(--font_Playfair);
   display: flex;
 padding-top: 5vh;
+justify-content: center;
+text-align: center;
 }
 #homepage_slogan{
   font: 20px var(--font_Playfair);
@@ -31,7 +33,5 @@ padding-top: 5vh;
 #container{
   display: flex;
   flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 25px;
+  gap: 25px;
 }
