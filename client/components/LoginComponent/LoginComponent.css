@@ -17,7 +17,6 @@
     text-align: center;
     color: var(--font_colour);
   }
-  
   .form-element {
     width: 100%;
     padding: 10px;
@@ -26,7 +25,6 @@
     border-radius: 5px;
     transition: 0.2s ease;
   }
-  
   .form-element:focus {
     border-color: #4a90e2;
     outline: none;
@@ -34,7 +32,7 @@
   }
   
   button.form-element {
-    background-color: pink;
+    background-color: var(--orange);
     color: #ffffff;
     border: none;
     padding: 0.8rem;
@@ -44,7 +42,6 @@
     border-radius: 5px;
     transition: background-color 0.3s ease;
   }
-
   #submit{
     background-color: var(--orange);
     border: 2px solid transparent;
