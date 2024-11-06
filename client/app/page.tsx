@@ -1,55 +1,34 @@
 "use client";
+import { useEffect, useState } from "react";
+import { LoginComponent } from "../components/LoginComponent/LoginComponent";
+import { ContentComponent } from "../components/ContentComponent/ContentComponent";
+function page() {
+  const [login, setLogin] = useState("Loading");
 
-import React, { useEffect, useState } from "react";
-
-function Page() {
-  const [files, setFiles] = useState<File[]>([]);
-  const [uploadStatus, setUploadStatus] = useState("");
-
-  const handleFileChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-    if (event.target.files) {
-      setFiles(Array.from(event.target.files));
-    }
-  };
-
-  const handleUpload = async () => {
-    if (files.length === 0) {
-      alert("Please select files first.");
-      return;
-    }
-
-    const formData = new FormData();
-    files.forEach((file) => formData.append("files", file));
-
-    try {
-      const response = await fetch("/api/upload", {
-        method: "POST",
-        body: formData,
-      });
-
-      const result = await response.json();
-      if (response.ok) {
-        setUploadStatus(
-          `Files uploaded successfully! URLs: ${result.urls.join(", ")}`
-        );
-      } else {
-        setUploadStatus("File upload failed.");
-      }
-    } catch (error) {
-      console.error("Error uploading files:", error);
-      setUploadStatus("File upload failed.");
-    }
-  };
-
+  useEffect(() => {
+    // Get the cookie information and set the state of Login accordingly
+    setLogin("Logged In");
+  }, []);
   return (
-    <div>
-      <h1>Upload Multiple Files</h1>
-      <input type="file" onChange={handleFileChange} multiple />{" "}
-      {/* Enable multiple file selection */}
-      <button onClick={handleUpload}>Upload Files</button>
-      {uploadStatus && <p>{uploadStatus}</p>}
-    </div>
+    <>
+      <div id="container">
+        <div id="auth-buttons">
+          <button className="auth-button" id="Login">
+            Login
+          </button>
+          <button className="auth-button" id="signup">
+            Sign Up
+          </button>
+        </div>
+        <h1 id="homepage_title">Securaid</h1>
+        <h4 id="homepage_slogan">A secure place for everyone</h4>
+        <div id="loginComponent">
+          <LoginComponent />
+        </div>
+      </div>
+      <ContentComponent />
+    </>
   );
 }
 
-export default Page;
+export default page;

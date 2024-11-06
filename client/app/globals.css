@@ -3,19 +3,67 @@
 @tailwind utilities;
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #ededed;
-    --foreground: #171717;
-  }
+  --font_colour: #faf9f6;
+  --font_Playfair: "Playfair Display";
+  --font_Helvetica: "Helvetica";
+  --orange: #db7642;
 }
 
 body {
-  color: var(--foreground);
-  background: var(--background);
+  color: var(--font_colour);
   font-family: Arial, Helvetica, sans-serif;
+  background-image: url('../public/Shockwave.jpeg');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  margin: 15px;
+}
+
+#homepage_title {
+  font: 75px var(--font_Playfair);
+  text-align: center;
+  flex-grow: 1;
+}
+#homepage_slogan{
+  font: 20px var(--font_Playfair);
+  display: flex;
+  justify-content: center;
+}
+#container{
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+#navigation {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+.auth-button {
+  padding: 10px 20px;
+  font-size: 16px;
+  font-family: var(--font_Helvetica);
+  color: var(--font_colour);
+  background-color: transparent;
+  border: 1px solid #faf9f6;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+
+}
+.auth-button:hover {
+border: 1px solid var(--orange);
+transition: all 0.3s ease-in-out;
+}
+
+#auth-buttons {
+  display: flex;
+  gap: 25px;
+justify-content: flex-end;
+}
+
+#loginComponent{
+  display: flex;
+justify-content: center;
 }

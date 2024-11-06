@@ -1,0 +1,52 @@
+.dashboard_container{
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    backdrop-filter: blur(20px);
+    padding: 25px;
+    border-radius: 25px;
+    border: 5px solid var(--orange);
+    height: max-content;
+}
+
+.title {
+    font-size: 25px;
+    font-weight: bold;
+    text-align: start;
+    color: var(--font_colour);
+  }
+
+  .content{
+    display: flex;
+    flex: 1;
+    justify-content: space-evenly;
+    border-radius: 15px;
+
+gap: 25px;
+  }
+  .score_container{
+display: flex;
+flex-direction: column;
+width: 100%;
+gap: 10px;
+
+  }
+
+  .vulnerability_container{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+
+  }
+  .subtitle{
+    font: 22px var(--font_Helvetica);
+  }
+
+  .billboard{
+    background-color: var(--orange);
+    border-radius: 5px;
+    padding: 5px 10px;
+    width: max-content;
+  }
+
+

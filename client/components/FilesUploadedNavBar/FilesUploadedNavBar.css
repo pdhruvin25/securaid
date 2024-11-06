@@ -1,0 +1,26 @@
+.files-uploaded-navbar {
+    min-width: fit-content;
+    padding: 25px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    border-radius: 15px;
+    border: 5px solid var(--orange);
+    gap: 25px;
+    font-family: var(--font-Helvetica);
+height:max-content;
+  }
+
+  .files-uploaded-navbar-title {
+    font-size: 25px;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+    text-align: center;
+    color:var(--font_colour);
+  }
+
+  .files-uploaded-navbar-content {
+    display: flex;
+    flex-direction: column;
+    font-size: 1.2rem;
+  }
