@@ -2,7 +2,6 @@ import { useRef, useState } from "react";
 import "./UploadContentComponent.css";
 
 export function UploadContentComponent(props) {
-  const {} = props;
   const uploadFile = useRef(null);
   const uploads = useRef(null);
   const [uploadedFiles, setUploadedFiles] = useState([]);
@@ -13,14 +12,34 @@ export function UploadContentComponent(props) {
     setUploadedFiles(fileNames);
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    setUploadedFiles([]);
+
+    const files = uploadFile.current.files;
+    if (files.length === 0) return;
+
+    const formData = new FormData();
+    Array.from(files).forEach((file) => {
+      formData.append("files", file);
+    });
+
+    try {
+      const response = await fetch("/api/upload", {
+        method: "POST",
+        body: formData,
+      });
+      if (response.ok) {
+        const result = await response.json();
+        console.log("Files uploaded successfully:", result);
+        setUploadedFiles([]); // Clear the uploaded files list
+      } else {
+        console.error("File upload failed");
+      }
+    } catch (error) {
+      console.error("Error uploading files:", error);
+    }
+
     e.target.reset();
-    // loginUser(username, password).then(() => {
-    //   e.target.reset();
-    //   //rest the form, and make the visibility of the component invisibile
-    // });
   };
 
   return (
