@@ -1,19 +1,55 @@
-import React, { useEffect, useState } from 'react'
+"use client";
 
-function page() {
+import React, { useEffect, useState } from "react";
 
-  const [message, setMessage] = useState("Loading")
+function Page() {
+  const [files, setFiles] = useState<File[]>([]);
+  const [uploadStatus, setUploadStatus] = useState("");
 
-  useEffect(() => {
-    fetch("http://localhost:3000/api/home").then(response => response.json()).then(data => {
-      console.log(data);
-      setMessage(data.message);
-    })
-  }, [])
+  const handleFileChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+    if (event.target.files) {
+      setFiles(Array.from(event.target.files));
+    }
+  };
+
+  const handleUpload = async () => {
+    if (files.length === 0) {
+      alert("Please select files first.");
+      return;
+    }
+
+    const formData = new FormData();
+    files.forEach((file) => formData.append("files", file));
+
+    try {
+      const response = await fetch("/api/upload", {
+        method: "POST",
+        body: formData,
+      });
+
+      const result = await response.json();
+      if (response.ok) {
+        setUploadStatus(
+          `Files uploaded successfully! URLs: ${result.urls.join(", ")}`
+        );
+      } else {
+        setUploadStatus("File upload failed.");
+      }
+    } catch (error) {
+      console.error("Error uploading files:", error);
+      setUploadStatus("File upload failed.");
+    }
+  };
 
   return (
-    <div>Hello World</div>
-  )
+    <div>
+      <h1>Upload Multiple Files</h1>
+      <input type="file" onChange={handleFileChange} multiple />{" "}
+      {/* Enable multiple file selection */}
+      <button onClick={handleUpload}>Upload Files</button>
+      {uploadStatus && <p>{uploadStatus}</p>}
+    </div>
+  );
 }
 
-export default page
+export default Page;
