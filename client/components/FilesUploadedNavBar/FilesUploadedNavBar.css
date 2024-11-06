@@ -1,6 +1,5 @@
 .files-uploaded-navbar {
-
-    max-width: 30vh;
+    min-width: fit-content;
     padding: 25px;
     border-radius: 10px;
     display: flex;
