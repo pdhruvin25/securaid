@@ -1,6 +1,6 @@
-.complex-form {
+#login-form {
     max-width: 500px;
-    min-width:200px;
+    min-width:400px;
     padding: 25px;
     border-radius: 10px;
     display: flex;

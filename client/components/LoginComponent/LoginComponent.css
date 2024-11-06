@@ -4,8 +4,8 @@
     border-radius: 10px;
     display: flex;
     flex-direction: column;
-backdrop-filter: blur(15px);
-border-radius: 15px;
+    backdrop-filter: blur(15px);
+    border-radius: 15px;
     gap: 25px;
     font-family: var(--font-Helvetica);
   }
@@ -45,4 +45,9 @@ border-radius: 15px;
 
   #submit{
     background-color: var(--orange);
+    transition: all 0.2s ease-in-out;
+  }
+  #submit:hover{
+    background-color: rgba(0, 0, 0, 0.6);
+    transition: all 0.2s ease-in-out;
   }

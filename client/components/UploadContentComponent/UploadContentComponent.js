@@ -17,7 +17,6 @@ export function UploadContentComponent(props) {
     e.preventDefault();
     setUploadedFiles([]);
     e.target.reset();
-    // const username = usernameRef.current.value;
     // loginUser(username, password).then(() => {
     //   e.target.reset();
     //   //rest the form, and make the visibility of the component invisibile
@@ -26,7 +25,7 @@ export function UploadContentComponent(props) {
 
   return (
     <div className="upload_container">
-    <form className="complex-form" id="login-form" onSubmit={handleSubmit}>
+    <form id="login-form" onSubmit={handleSubmit}>
       <div className="form-title">Upload Project</div>
      <input type="file" name="directory" className="form-element" ref={uploadFile} required  webkitdirectory="true" multiple onChange={handleFileSelection}/>
       <button type="submit" className="form-element" id="submit">
