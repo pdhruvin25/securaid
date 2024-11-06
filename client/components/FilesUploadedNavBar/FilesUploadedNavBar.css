@@ -4,8 +4,8 @@
     border-radius: 10px;
     display: flex;
     flex-direction: column;
-    background-color: rgba(0, 0, 0, 0.6);
     border-radius: 15px;
+    border: 5px solid var(--orange);
     gap: 25px;
     font-family: var(--font-Helvetica);
 height:max-content;

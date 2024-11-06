@@ -1,13 +1,15 @@
 .complex-form {
     max-width: 500px;
+    min-width: 350px;
     padding: 25px;
     border-radius: 10px;
     display: flex;
     flex-direction: column;
-    backdrop-filter: blur(15px);
+    backdrop-filter: blur(20px);
     border-radius: 15px;
     gap: 25px;
     font-family: var(--font-Helvetica);
+    border: 5px solid var(--orange);
   }
   .form-title {
     font-size: 25px;

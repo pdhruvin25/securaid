@@ -5,10 +5,11 @@
     border-radius: 10px;
     display: flex;
     flex-direction: column;
-        backdrop-filter: blur(15px);
+        backdrop-filter: blur(20px);
         border-radius: 15px;
     gap: 25px;
     font-family: var(--font-Helvetica);
+    border: 5px solid var(--orange);
   }
   .form-title {
     font-size: 25px;
@@ -43,11 +44,11 @@
     border-radius: 5px;
     transition: background-color 0.3s ease;
   }
-  
+
   button.form-element:hover {
     background-color: #357ab8;
   }
-  
+
   button.form-element:active {
     background-color: #2a6191;
   }
@@ -57,9 +58,10 @@
     gap: 25px;
   }
   #files-uploaded{
-display: flex;
+display: inline-flex;
 flex-wrap: wrap;
-gap: 15px;
+gap: 5px;
+height: max-content;
 }
 #uploaded-files{
 background-color:  var(--orange);

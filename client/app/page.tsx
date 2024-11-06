@@ -18,11 +18,12 @@ function page() {
             <button className="auth-button" id="signup">Sign Up</button>
           </div>
           <h1 id="homepage_title">Securaid</h1>
-
         <h4 id="homepage_slogan">A secure place for everyone</h4>
+        <div id="loginComponent">
         <LoginComponent />
-        <ContentComponent />
+        </div>
       </div>
+      <ContentComponent />
     </>
   )
 }

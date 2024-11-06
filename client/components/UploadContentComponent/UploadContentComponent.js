@@ -35,7 +35,7 @@ export function UploadContentComponent(props) {
     <div id ="files-uploaded" ref={uploads}>
         {uploadedFiles.length > 0 ? (
             uploadedFiles.map((fileName, index) => (
-              <h3 id="uploaded-files" key={index}>{fileName}</h3>
+              <div id="uploaded-files" key={index}>{fileName}</div>
             ))
         ) : null}
     </div>

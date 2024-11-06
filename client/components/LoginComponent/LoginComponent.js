@@ -19,7 +19,7 @@ export function LoginComponent(props) {
   };
 
   return (
-    <form className="complex-form" id="login-form" onSubmit={handleSubmit}>
+    <form className="complex-form" onSubmit={handleSubmit}>
       <div className="form-title">Login</div>
       <input
         type="text"

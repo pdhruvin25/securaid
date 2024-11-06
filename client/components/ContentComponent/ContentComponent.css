@@ -1,7 +1,7 @@
 #content_container{
     display: flex;
     gap: 25px;
-    backdrop-filter: blur(15px);
+    backdrop-filter: blur(20px);
     border-radius: 25px;
     padding: 25px;
 }
