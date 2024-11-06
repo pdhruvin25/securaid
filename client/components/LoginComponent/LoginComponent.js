@@ -39,7 +39,7 @@ export function LoginComponent(props) {
         required
         ref={passwordRef}
       />
-      <button type="submit" className="form-element">
+      <button type="submit" className="form-element" id="submit">
         Submit
       </button>
     </form>

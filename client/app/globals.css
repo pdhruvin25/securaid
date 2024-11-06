@@ -6,6 +6,7 @@
   --font_colour: #faf9f6;
   --font_Playfair: "Playfair Display";
   --font_Helvetica: "Helvetica";
+  --orange: #db7642;
 }
 
 body {
@@ -15,15 +16,13 @@ body {
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
-margin: 25px;
+  margin: 15px;
 }
 
-#homepage_title{
+#homepage_title {
   font: 75px var(--font_Playfair);
-  display: flex;
-padding-top: 5vh;
-justify-content: center;
-text-align: center;
+  text-align: center;
+  flex-grow: 1;
 }
 #homepage_slogan{
   font: 20px var(--font_Playfair);
@@ -35,3 +34,32 @@ text-align: center;
   flex-direction: column;
   gap: 25px;
 }
+#navigation {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+.auth-button {
+  padding: 10px 20px;
+  font-size: 16px;
+  font-family: var(--font_Helvetica);
+  color: var(--font_colour);
+  background-color: transparent;
+  border: 1px solid #faf9f6;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+
+}
+.auth-button:hover {
+border: 1px solid var(--orange);
+transition: all 0.3s ease-in-out;
+}
+
+#auth-buttons {
+  display: flex;
+  gap: 25px;
+justify-content: flex-end;
+}
+

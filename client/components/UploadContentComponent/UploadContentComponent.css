@@ -1,11 +1,12 @@
 .complex-form {
     max-width: 500px;
+    min-width:200px;
     padding: 25px;
     border-radius: 10px;
     display: flex;
     flex-direction: column;
-backdrop-filter: blur(15px);
-border-radius: 15px;
+        backdrop-filter: blur(15px);
+        border-radius: 15px;
     gap: 25px;
     font-family: var(--font-Helvetica);
   }
@@ -50,3 +51,24 @@ border-radius: 15px;
   button.form-element:active {
     background-color: #2a6191;
   }
+
+  .upload_container{
+    display: flex;
+    gap: 25px;
+  }
+  #files-uploaded{
+display: flex;
+flex-wrap: wrap;
+gap: 15px;
+}
+#uploaded-files{
+background-color:  var(--orange);
+height: fit-content;
+padding:5px 10px;
+border-radius: 5px;
+font: 20px var(--font-Helvetica);
+}
+
+#submit{
+  background-color: var(--orange);
+}
