@@ -1,15 +1,12 @@
-// models/File.js
 import mongoose from "mongoose";
 
 const fileSchema = new mongoose.Schema({
-  s3Url: { type: String, required: true },
-  filename: { type: String, required: true },
-  userId: { type: mongoose.Schema.Types.ObjectId, ref: "User" },
-  uploadDate: { type: Date, default: Date.now },
-  fileType: { type: String },
-  size: { type: Number },
-  tags: [String],
+  name: { type: String, required: true },
+  url: { type: String, required: true },
+  size: { type: Number, required: true },
+  type: { type: String, required: true },
+  uploadedAt: { type: Date, default: Date.now },
 });
 
-const File = mongoose.model("File", fileSchema);
-export default File;
+// Check if the model already exists to avoid OverwriteModelError
+export default mongoose.models.File || mongoose.model("File", fileSchema);
