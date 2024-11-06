@@ -1,6 +1,6 @@
 #login-form {
     max-width: 500px;
-    min-width:400px;
+    min-width: 350px;
     padding: 25px;
     border-radius: 10px;
     display: flex;
@@ -74,3 +74,10 @@ font: 20px var(--font-Helvetica);
 #submit{
   background-color: var(--orange);
 }
+
+@media (max-width: 500px) {
+    .upload_container{
+        display: flex;
+        flex-direction: column;
+      }
+  }

@@ -1,4 +1,4 @@
-.dashboard_container{
+.dashboard_container {
     display: flex;
     flex-direction: column;
     flex: 1;
@@ -14,39 +14,39 @@
     font-weight: bold;
     text-align: start;
     color: var(--font_colour);
-  }
+}
 
-  .content{
+.content {
     display: flex;
     flex: 1;
     justify-content: space-evenly;
     border-radius: 15px;
 
-gap: 25px;
-  }
-  .score_container{
-display: flex;
-flex-direction: column;
-width: 100%;
-gap: 10px;
+    gap: 25px;
+}
 
-  }
-
-  .vulnerability_container{
+.score_container {
     display: flex;
     flex-direction: column;
     width: 100%;
+    gap: 10px;
 
-  }
-  .subtitle{
+}
+
+.subtitle {
     font: 22px var(--font_Helvetica);
-  }
+}
 
-  .billboard{
+.billboard {
     background-color: var(--orange);
     border-radius: 5px;
     padding: 5px 10px;
     width: max-content;
-  }
+}
 
-
+@media (max-width: 500px) {
+    .content {
+        display: flex;
+        flex-direction: column;
+    }
+}
