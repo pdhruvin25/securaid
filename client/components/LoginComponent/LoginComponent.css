@@ -47,9 +47,11 @@
 
   #submit{
     background-color: var(--orange);
+    border: 2px solid transparent;
     transition: all 0.2s ease-in-out;
   }
   #submit:hover{
     background-color: rgba(0, 0, 0, 0.6);
+    border: 2px solid var(--orange);
     transition: all 0.2s ease-in-out;
   }
