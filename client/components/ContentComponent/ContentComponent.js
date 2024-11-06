@@ -11,7 +11,6 @@ export function ContentComponent(props) {
         <FilesUploadedNavBar/>
         <DashboardComponent/>
     </div>
-    {/* <FilesUploadedNavBar/> */}
     </>
   );
 }

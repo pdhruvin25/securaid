@@ -9,7 +9,7 @@ export function UploadContentComponent(props) {
 
   const handleFileSelection = () => {
     const files = uploadFile.current.files;
-    const fileNames = Array.from(files).map(file => file.name);
+    const fileNames = Array.from(files).map((file) => file.name);
     setUploadedFiles(fileNames);
   };
 
@@ -25,20 +25,31 @@ export function UploadContentComponent(props) {
 
   return (
     <div className="upload_container">
-    <form id="login-form" onSubmit={handleSubmit}>
-      <div className="form-title">Upload Project</div>
-     <input type="file" name="directory" className="form-element" ref={uploadFile} required  webkitdirectory="true" multiple onChange={handleFileSelection}/>
-      <button type="submit" className="form-element" id="submit">
-        Submit
-      </button>
-    </form>
-    <div id ="files-uploaded" ref={uploads}>
-        {uploadedFiles.length > 0 ? (
-            uploadedFiles.map((fileName, index) => (
-              <div id="uploaded-files" key={index}>{fileName}</div>
+      <form id="login-form" onSubmit={handleSubmit}>
+        <div className="form-title">Upload Project</div>
+        <input
+          type="file"
+          name="directory"
+          className="form-element"
+          ref={uploadFile}
+          required
+          webkitdirectory="true"
+          multiple
+          onChange={handleFileSelection}
+        />
+        <button type="submit" className="form-element" id="submit">
+          Submit
+        </button>
+      </form>
+      <div id="files-uploaded" ref={uploads}>
+        {uploadedFiles.length > 0
+          ? uploadedFiles.map((fileName, index) => (
+              <div id="uploaded-files" key={index}>
+                {fileName}
+              </div>
             ))
-        ) : null}
-    </div>
+          : null}
+      </div>
     </div>
   );
 }

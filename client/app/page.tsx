@@ -12,7 +12,7 @@ function page() {
   }, [])
   return (
     <>
-      <div id="container">
+      <div id="login_container">
           <div id="auth-buttons">
             <button className="auth-button" id="Login">Login</button>
             <button className="auth-button" id="signup">Sign Up</button>
@@ -23,7 +23,9 @@ function page() {
         <LoginComponent />
         </div>
       </div>
+      <div id="container">
       <ContentComponent />
+      </div>
     </>
   )
 }

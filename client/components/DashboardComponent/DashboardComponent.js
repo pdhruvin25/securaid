@@ -13,12 +13,10 @@ export function DashboardComponent(props) {
                 <div className="subtitle">Type Of Vulnerabilities</div>
             </div>
             <div className="billboard">
-                <div className="subtitle">Project Progress</div>
-            </div>
-        </div>
-        <div className="vulnerability_container">
-            <div className="billboard">
                 <div className="subtitle">Vulnerabilities</div>
+            </div>
+            <div className="billboard">
+                <div className="subtitle">Project Progress</div>
             </div>
         </div>
       </div>
